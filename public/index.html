@@ -9,16 +9,38 @@
     <!-- content wrapper -->
     <div class="grid md:grid-cols-3">
       <!-- begin nav-->
-      <div class="md:col-span-1">
-        <nav>
-          <div>
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <nav class="text-right">
+          <div class="flex items-center justify-between">
             <h1 class="border-b border-gray-100 p-4 font-bold uppercase">
               <a href="/" class="hover:text-gray-700">Food Ninja</a>
             </h1>
+            <!-- use cursor-pointer to get a litter finger while hovering over it -->
+            <!-- Only show this div on smaller screens and hide it from mid size screens onwards -->
+            <div class="cursor-pointer px-4 md:hidden" id="burger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
           </div>
-          <ul>
-            <li class="font-bold text-gray-700">
-              <a href="#">
+          <!-- change the ul style from display:none to display:block based on the screen size -->
+          <ul class="mt-6 hidden text-sm md:block" id="menu">
+            <li class="py-1 font-bold text-gray-700">
+              <a
+                href="#"
+                class="border-primary flex justify-end border-r-2 px-4"
+              >
                 <span>Home</span>
 
                 <svg
@@ -27,7 +49,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-5"
+                  class="ml-2 w-5"
                 >
                   <path
                     stroke-linecap="round"
@@ -37,8 +59,8 @@
                 </svg>
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li class="py-1">
+              <a href="#" class="flex justify-end border-r-2 border-white px-4">
                 <span>About</span>
 
                 <svg
@@ -47,7 +69,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-5"
+                  class="ml-2 w-5"
                 >
                   <path
                     stroke-linecap="round"
@@ -57,8 +79,8 @@
                 </svg>
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li class="py-1">
+              <a href="#" class="flex justify-end border-r-2 border-white px-4">
                 <span>Contact</span>
 
                 <svg
@@ -67,7 +89,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-5"
+                  class="ml-2 w-5"
                 >
                   <path
                     stroke-linecap="round"
@@ -232,5 +254,6 @@
         </div>
       </main>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
