@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body class="text-gray-700">
-    <div>
-      <!-- content wrapper -->
-      <div>
-        <!-- begin nav-->
+    <!-- content wrapper -->
+    <div class="grid md:grid-cols-3">
+      <!-- begin nav-->
+      <div class="md:col-span-1">
         <nav>
           <div>
             <h1 class="border-b border-gray-100 p-4 font-bold uppercase">
@@ -37,7 +37,7 @@
       </div>
       <!-- end nav -->
 
-      <main class="bg-gray-100 px-16 py-6">
+      <main class="bg-gray-100 px-16 py-6 md:col-span-2">
         <div class="flex justify-center md:justify-end">
           <a href="#" class="text-primary">Log in</a>
           <a href="#" class="text-primary ml-2">Sign up</a>
@@ -59,7 +59,10 @@
             Latest Recipes
           </h4>
 
-          <div class="mt-8">
+          <!-- giving it grid class will make it a grid container -->
+          <!-- grid-cols-3 because we want our grid to have 3 columns -->
+          <!-- because we want some gap between the column items in a row -->
+          <div class="mt-8 grid gap-10 lg:grid-cols-3">
             <!-- cards go here -->
             <div class="card">
               <img
