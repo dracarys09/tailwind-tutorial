@@ -9,3 +9,8 @@
 .badge {
   @apply bg-secondary-100 text-secondary-200 absolute top-0 ml-2 mt-2 rounded-full p-2 text-xs font-bold uppercase;
 }
+
+/* tracking is the space between the letters */
+.btn {
+  @apply cursor-pointer rounded-full px-3 py-2 text-xs font-bold uppercase tracking-wider;
+}
