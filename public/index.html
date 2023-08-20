@@ -106,14 +106,17 @@
 
       <main class="bg-gray-100 px-16 py-6 md:col-span-2">
         <div class="flex justify-center md:justify-end">
+          <!-- for transitions, we need to give a base class of transition -->
+          <!-- we also need to give a easing function (ease-out in this case) -->
+          <!-- finally we give the time duration for the transition (500ms in this case) -->
           <a
             href="#"
-            class="text-primary btn border-primary hover:bg-primary hover:text-white md:border-2"
+            class="text-primary btn border-primary hover:bg-primary transition duration-500 ease-out hover:text-white md:border-2"
             >Log in</a
           >
           <a
             href="#"
-            class="text-primary btn border-primary hover:bg-primary ml-2 hover:text-white md:border-2"
+            class="text-primary btn border-primary hover:bg-primary ml-2 transition duration-500 ease-out hover:text-white md:border-2"
             >Sign up</a
           >
         </div>
@@ -245,8 +248,11 @@
           </div>
 
           <div class="flex justify-center">
+            <!-- on hover, transform (base class of transform) the scale to 125 (hover:scale-125) -->
+            <!-- on hover, change the background opacity to 50% (hover:bg-opacity-50) -->
+            <!-- use transition to make the tranform on hover more smooth -->
             <div
-              class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner"
+              class="transion bg-secondary-100 text-secondary-200 btn transform duration-300 ease-out hover:scale-125 hover:bg-opacity-50 hover:shadow-inner"
             >
               Load more
             </div>
